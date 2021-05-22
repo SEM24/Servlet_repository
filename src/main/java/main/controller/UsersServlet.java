@@ -62,7 +62,8 @@ public class UsersServlet extends HttpServlet {
                     deleteUserRole.isPresent() && deleteUserRole.get().equals(Role.ROLE_USER)) {
                 db.remove(deleteUser);
             } else {
-                writer.print("You can't delete users with this role, change the role");
+                writer.print(
+                        "You can't delete users with this role, change the role");
             }
             req.getRequestDispatcher("users.jsp").include(req, resp);
         } else if (userRole.isPresent() && userRole.get().equals(Role.ROLE_SUPPORT)) {
@@ -71,7 +72,8 @@ public class UsersServlet extends HttpServlet {
             if (deleteUserRole.isPresent() && deleteUserRole.get().equals(Role.ROLE_USER)) {
                 db.remove(deleteUser);
             } else {
-                writer.print("You can't delete users with this role, change the role");
+                writer.print(
+                        "You can't delete users with this role, change the role");
             }
             req.getRequestDispatcher("users.jsp").include(req, resp);
         }

@@ -19,6 +19,7 @@ public class LogoutServlet extends HttpServlet {
 
        request.getRequestDispatcher("/").include(request, response);
 
-        out.print("You are successfully logged out!");
+        out.print("<div style=\"color:Red;\"text-align: center;\">" +
+                "You are successfully logged out!</div>");
     }
 }

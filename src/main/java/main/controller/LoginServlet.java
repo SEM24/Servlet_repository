@@ -33,15 +33,18 @@ public class LoginServlet extends HttpServlet {
 
         PrintWriter writer = resp.getWriter();
 
-        String colorText = "<div style=\"color:Red;\"text-align: left;\">";
+      //  String colorText = "<div style=\"color:Red;\"text-align: left;\">";
         if (login.isEmpty()) {
-            writer.println(colorText + "Login is empty</div");
+            writer.println(
+                    "Login is empty");
             req.getRequestDispatcher("/").include(req, resp);
         } else if (password.isEmpty()) {
-            writer.print("Password is empty");
+            writer.print(
+                    "Password is empty");
             req.getRequestDispatcher("/").include(req, resp);
         } else if (db.getUserByType(login, password).isEmpty()) {
-            writer.print("Login/Password incorrect. Try again.");
+            writer.print(
+                    "Login/Password incorrect. Try again.");
         } else if (db.getUserByType(login, password).isPresent()) {
             req.setAttribute("users", db.getMemoryDb());
             resp.sendRedirect("/users");

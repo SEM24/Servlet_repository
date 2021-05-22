@@ -46,7 +46,8 @@ public class AddServlet extends HttpServlet {
                 db.add(user);
                 resp.sendRedirect("/users");
             }
-            writer.print("You can't add user with your role, change the role");
+            writer.print(
+                    "You can't add user with your role, change the role");
             req.setAttribute("access_admin", Role.ROLE_ADMIN);
             req.setAttribute("users", db.getMemoryDb());
             req.getRequestDispatcher("users.jsp").include(req, resp);
@@ -55,7 +56,8 @@ public class AddServlet extends HttpServlet {
                 db.add(user);
                 resp.sendRedirect("/users");
             }
-            writer.print("You can't add user with your role, change the role");
+            writer.print(
+                    "You can't add user with your role, change the role");
             req.setAttribute("access_admin", Role.ROLE_SUPPORT);
             req.setAttribute("users", db.getMemoryDb());
             req.getRequestDispatcher("users.jsp").include(req, resp);

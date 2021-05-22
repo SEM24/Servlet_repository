@@ -15,9 +15,6 @@
         color: #FFFF;
         text-align: center;
         vertical-align: middle;
-        line-height: 100%;
-        height: 100%;
-        text-decoration: none;
         font-size:3.9vw;
     }
     .user_list {
