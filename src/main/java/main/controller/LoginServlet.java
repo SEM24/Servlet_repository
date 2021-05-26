@@ -33,7 +33,6 @@ public class LoginServlet extends HttpServlet {
 
         PrintWriter writer = resp.getWriter();
 
-      //  String colorText = "<div style=\"color:Red;\"text-align: left;\">";
         if (login.isEmpty()) {
             writer.println(
                     "Login is empty");
@@ -50,5 +49,6 @@ public class LoginServlet extends HttpServlet {
             resp.sendRedirect("/users");
         }
         writer.close();
+
     }
 }
